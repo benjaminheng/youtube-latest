@@ -1,0 +1,30 @@
+.header {
+    text-align: center; 
+    margin-bottom: $spacing-unit;
+
+    .title {
+        font-size: type-scale(2);
+    }
+
+    .caption {
+        font-size: type-scale(1);
+    }
+
+    @include media-query($breakpoint-medium) {
+        .title, .caption {
+            display: inline;
+            line-height: line-height(2);
+        }
+
+        .title {
+            float: left;
+            margin-right: $spacing-unit;
+        }
+
+        .caption {
+            float: right;
+        }
+
+        @extend %clearfix;
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "youtube-latest",
+  "version": "0.0.1",
+  "description": "View the most recently uploaded videos on youtube",
+  "scripts": {
+    "start": "node app/server/index.js",
+    "start:dev": "nodemon --watch app/server app/server/index.js"
+  },
+  "author": "Ben",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "dateformat": "^1.0.12",
+    "express": "^4.13.3",
+    "isomorphic-fetch": "^2.2.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "css-loader": "^0.23.0",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0"
+  }
+}

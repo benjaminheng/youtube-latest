@@ -1,0 +1,22 @@
+@mixin media-query($device) {
+    @media all and (min-width: $device) {
+        @content;
+    }
+}
+
+@function line-height($level) {
+    @return map-get($line-heights, $level);
+}
+
+@function type-scale($level) {
+    @return map-get($type-scale, $level);
+}
+
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
