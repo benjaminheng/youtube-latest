@@ -14,7 +14,7 @@ export default class VideoList extends Component {
                 <h2>Recent uploads</h2>
                 <div>
                     {videos.map((video, i) => 
-                        <VideoListItem key={i} index={i} video={video} selected={i === selectedIndex} onSelect={onSelect}/>
+                        <VideoListItem key={i} index={i} video={video} selected={i == selectedIndex} onSelect={onSelect}/>
                     )}
                 </div>
             </div>
