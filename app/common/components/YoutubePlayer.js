@@ -10,7 +10,7 @@ export default class YoutubePlayer extends Component {
         return (
             <div className='youtube-player'>
                 <div className='wrapper'>
-                    <iframe type="text/html" width="640" height="390" src={url} />
+                    <iframe type="text/html" width="640" height="390" src={url} allowFullScreen ></iframe>
                 </div>
             </div>
         );
