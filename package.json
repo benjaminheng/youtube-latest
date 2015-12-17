@@ -4,7 +4,8 @@
   "description": "View the most recently uploaded videos on youtube",
   "scripts": {
     "start": "node app/server/index.js",
-    "start:dev": "nodemon --watch app/server app/server/index.js"
+    "start:dev": "nodemon --watch app/server app/server/index.js",
+    "build": "webpack -p --config webpack.production.config.js"
   },
   "author": "Ben",
   "license": "MIT",
@@ -23,6 +24,7 @@
     "babel-loader": "^6.2.0",
     "babel-plugin-react-transform": "^2.0.0-beta1",
     "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^0.9.1",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "react-transform-hmr": "^1.0.1",

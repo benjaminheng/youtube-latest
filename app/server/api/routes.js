@@ -1,6 +1,7 @@
 import Express from 'express';
 import dateformat from 'dateformat';
 import fetch from 'isomorphic-fetch';
+import config from '../../../config';
 
 const router = Express.Router();
 
@@ -16,7 +17,7 @@ router.get('/latest', function(req, res) {
         type: 'video',
         maxResults: 50,
         safeSearch: 'none',
-        key: process.env.YT_LATEST_API_KEY
+        key: config.apiKey
     }
 
     const url = buildUrl('https://www.googleapis.com/youtube/v3/search', params);

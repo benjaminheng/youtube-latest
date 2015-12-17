@@ -18,7 +18,6 @@ class App extends Component {
     }
 
     onSelect(index) {
-        console.log('this.videos -> ' + this);
         if (index >= 0 && index < this.videos.length) {
             this.selectedIndex = index;
             //window.scrollTo(0, 0);
