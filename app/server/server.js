@@ -4,7 +4,7 @@ import apiRoutes from './api/routes';
 import config from '../../config';
 
 const app = Express();
-const port = 3000;
+const port = config.port || 3000;
 
 if (!config.apiKey) {
     console.error('[ERROR] API key not set. Specify your API key by setting the YTLATEST_API_KEY environment variable.');
