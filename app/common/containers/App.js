@@ -21,7 +21,7 @@ class App extends Component {
         console.log('this.videos -> ' + this);
         if (index >= 0 && index < this.videos.length) {
             this.selectedIndex = index;
-            window.scrollTo(0, 0);
+            //window.scrollTo(0, 0);
             this.forceUpdate();
         }
     }
@@ -49,7 +49,7 @@ class App extends Component {
     getEmbedUrl(video) {
         if (video) {
             const videoId = video.id.videoId;
-            return 'http://www.youtube.com/embed/' + videoId;
+            return 'http://www.youtube.com/embed/' + videoId + '?rel=0';
         }
     }
 
@@ -57,10 +57,16 @@ class App extends Component {
         const url = this.getEmbedUrl(this.videos[this.selectedIndex]);
         return (
             <div>
-                <Header />
-                <YoutubePlayer url={url} />
-                <RefreshButton clickHandler={this.refresh} />
-                <VideoList videos={this.videos} selectedIndex={this.selectedIndex} onSelect={this.onSelect} />
+                <div className='header-wrapper'>
+                    <Header />
+                </div>
+                <div className='video-wrapper'>
+                    <YoutubePlayer url={url} />
+                    <RefreshButton clickHandler={this.refresh} />
+                </div>
+                <div className='video-list-wrapper'>
+                    <VideoList videos={this.videos} selectedIndex={this.selectedIndex} onSelect={this.onSelect} />
+                </div>
             </div>
         );
     }

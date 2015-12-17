@@ -1,4 +1,10 @@
 .refresh-button {
     text-align: center;
-    margin: $spacing-unit 0px;
+    margin-top: $spacing-unit;
+    @extend %content;
+
+    input {
+        width: 200px;
+        height: 50px;
+    }
 }

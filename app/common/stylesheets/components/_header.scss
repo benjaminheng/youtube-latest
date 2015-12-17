@@ -1,13 +1,15 @@
 .header {
     text-align: center; 
-    margin-bottom: $spacing-unit;
+    color: #FFFFFF;
+    padding: $spacing-unit/3 0;
+    @extend %content;
 
     .title {
         font-size: type-scale(2);
     }
 
     .caption {
-        font-size: type-scale(1);
+        font-size: type-scale(0);
     }
 
     @include media-query($breakpoint-medium) {
@@ -23,6 +25,7 @@
 
         .caption {
             float: right;
+            font-size: type-scale(1);
         }
 
         @extend %clearfix;

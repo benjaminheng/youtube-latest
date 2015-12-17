@@ -12,6 +12,11 @@
     @return map-get($type-scale, $level);
 }
 
+%content {
+    margin: auto;
+    max-width: $content-width;
+}
+
 %clearfix {
 
     &:after {
