@@ -33,7 +33,7 @@ class App extends Component {
         if (index >= 0 && index < this.videos.length) {
             this.selectedIndex = index;
             this.updateViewedVideos();
-            //window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
             this.forceUpdate();
         }
     }
