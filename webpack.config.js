@@ -4,6 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     devtool: 'inline-source-map',
     entry: [
+        'webpack-hot-middleware/client',
         './app/client/index.js'
     ],
     output: {
@@ -13,6 +14,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ],
     module: {
