@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import YoutubePlayer from '../components/YoutubePlayer';
 import RefreshButton from '../components/RefreshButton';
+import GitHubRibbon from '../components/GitHubRibbon';
 import fetch from 'isomorphic-fetch';
 
 class App extends Component {
@@ -89,6 +90,7 @@ class App extends Component {
         const url = this.getEmbedUrl(this.videos[this.selectedIndex]);
         return (
             <div className='content'>
+                <GitHubRibbon />
                 <div className='hero'>
                     <Header />
                 </div>
