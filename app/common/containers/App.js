@@ -9,7 +9,6 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.videos = [];
-        this.onSelect = this.onSelect.bind(this);
         this.refresh = this.refresh.bind(this);
 
         this.viewedVideos = [];
@@ -26,15 +25,6 @@ class App extends Component {
             if (this.viewedVideos.length > 50) {
                 this.viewedVideos.pop();
             }
-        }
-    }
-
-    onSelect(index) {
-        if (index >= 0 && index < this.videos.length) {
-            this.selectedIndex = index;
-            this.updateViewedVideos();
-            window.scrollTo(0, 0);
-            this.forceUpdate();
         }
     }
 
@@ -89,7 +79,7 @@ class App extends Component {
     render() {
         const url = this.getEmbedUrl(this.videos[this.selectedIndex]);
         return (
-            <div className='content'>
+            <div>
                 <GitHubRibbon />
                 <div className='hero'>
                     <Header />
