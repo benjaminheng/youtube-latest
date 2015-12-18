@@ -9,7 +9,7 @@ export default class YoutubePlayer extends Component {
         const { url } = this.props;
         return (
             <div className='youtube-player'>
-                <div className='wrapper'>
+                <div className='iframe-wrapper'>
                     <iframe type="text/html" width="640" height="390" src={url} allowFullScreen ></iframe>
                 </div>
             </div>

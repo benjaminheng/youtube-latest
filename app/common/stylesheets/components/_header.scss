@@ -1,33 +1,16 @@
 .header {
-    text-align: center; 
-    color: #FFFFFF;
-    padding: $spacing-unit/3 0;
-    @extend %content;
-
+    text-align: center;
+    padding-top: $spacing-unit * 2;
     .title {
-        font-size: type-scale(2);
+        color: #FFF;
+        font-size: type-scale(3);
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
+        font-weight: 600;
     }
 
     .caption {
-        font-size: type-scale(0);
-    }
-
-    @include media-query($breakpoint-medium) {
-        .title, .caption {
-            display: inline;
-            line-height: line-height(2);
-        }
-
-        .title {
-            float: left;
-            margin-right: $spacing-unit;
-        }
-
-        .caption {
-            float: right;
-            font-size: type-scale(1);
-        }
-
-        @extend %clearfix;
+        color: #FFF;
+        font-size: type-scale(1);
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
     }
 }

@@ -1,10 +1,59 @@
 .refresh-button {
     text-align: center;
-    margin-top: $spacing-unit;
-    @extend %content;
+    margin: auto;
+    margin-top: 50px;
 
-    input {
+    button {
+        text-transform: uppercase;
         width: 200px;
         height: 50px;
+        color: #FFF;
+        font-size: type-scale(1);
+        letter-spacing: 1px;
+        background-color: #1877C1;
+        border: 1px solid darken(#1877C1, 30%);
+        border-radius: 2px;
+        box-shadow: 0 5px 10px rgba(16, 16, 16, 0.5);
+        padding-left: 25px;
+        cursor: pointer;
+        position: relative;
+
+        .icon {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            width: 55px;
+
+            svg {
+                height: 29px;
+            }
+
+            svg path {
+              fill: #fff;
+            }
+            
+            &.spin svg {
+                animation: spin 0.5s ease-in-out;
+            }
+        }
+
+        &:hover {
+            background-color: darken(#1877C1, 2%);
+        }
+
+        &:active {
+            margin-top: 2px;
+            box-shadow: 0 3px 10px rgba(16, 16, 16, 0.5);
+            background-color: darken(#1877C1, 5%);
+
+        }
+
+        @keyframes empty { }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     }
 }
+

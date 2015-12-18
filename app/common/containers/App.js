@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import YoutubePlayer from '../components/YoutubePlayer';
-import VideoList from '../components/VideoList';
 import RefreshButton from '../components/RefreshButton';
 import fetch from 'isomorphic-fetch';
 
@@ -89,16 +88,13 @@ class App extends Component {
     render() {
         const url = this.getEmbedUrl(this.videos[this.selectedIndex]);
         return (
-            <div>
-                <div className='header-wrapper'>
+            <div className='content'>
+                <div className='hero'>
                     <Header />
                 </div>
-                <div className='video-wrapper'>
+                <div className='floating-wrapper'>
                     <YoutubePlayer url={url} />
                     <RefreshButton clickHandler={this.refresh} />
-                </div>
-                <div className='video-list-wrapper'>
-                    <VideoList videos={this.videos} selectedIndex={this.selectedIndex} onSelect={this.onSelect} />
                 </div>
             </div>
         );

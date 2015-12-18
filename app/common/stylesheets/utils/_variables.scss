@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 $text-color: #222222;
-$accent-color: #F12B24;
-
-$content-width: 900px;
 
 $base-font-family: 'Helvetica', 'sans-serif';
 $base-font-size: 1rem;
@@ -15,16 +12,8 @@ $type-scale: (
     -1: $base-font-size / $type-ratio,
     0: $base-font-size,
     1: $base-font-size * $type-ratio,
-    2: $base-font-size * $type-ratio * $type-ratio
-);
-$line-heights: (
-    -1: $base-line-height,
-    0: $base-line-height,
-    1: $base-line-height * 2,
-    2: $base-line-height * 2
+    2: $base-font-size * $type-ratio * $type-ratio,
+    3: $base-font-size * $type-ratio * $type-ratio * $type-ratio
 );
 
 $spacing-unit: 30px;
-
-$breakpoint-medium: 768px;
-$breakpoint-large: 992px;

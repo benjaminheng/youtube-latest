@@ -4,17 +4,8 @@
     }
 }
 
-@function line-height($level) {
-    @return map-get($line-heights, $level);
-}
-
 @function type-scale($level) {
     @return map-get($type-scale, $level);
-}
-
-%content {
-    margin: auto;
-    max-width: $content-width;
 }
 
 %clearfix {

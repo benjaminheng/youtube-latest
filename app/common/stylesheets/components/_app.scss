@@ -1,15 +1,12 @@
-.header-wrapper {
-    background-color: #1E1E1F;
-    border-bottom: 2px solid $accent-color;
-    padding: 0 $spacing-unit;
+.hero {
+    background: url('../resources/img/hero-banner.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 450px;
 }
 
-.video-wrapper {
-    padding: $spacing-unit;
-    background-color: #272728;
-}
-
-.video-list-wrapper {
-    padding: $spacing-unit;
-    background-color: #FAFAFA;
+.floating-wrapper {
+    margin-top: -250px;
+    margin-left: $spacing-unit / 2;
+    margin-right: $spacing-unit / 2;
+    margin-bottom: $spacing-unit * 2;
 }

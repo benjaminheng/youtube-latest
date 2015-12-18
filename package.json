@@ -25,6 +25,7 @@
     "babel-plugin-react-transform": "^2.0.0-beta1",
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "react-transform-hmr": "^1.0.1",
