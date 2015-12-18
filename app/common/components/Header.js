@@ -9,7 +9,7 @@ export default class Header extends Component {
         return (
             <div className='header'>
                 <div className='title'>YouTube Latest</div>
-                <div className='caption'>Explore the wild wild west of YouTube</div>
+                <div className='caption'>Showing you the most recently uploaded videos</div>
             </div>
         );
     }
