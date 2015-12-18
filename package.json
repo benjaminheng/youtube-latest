@@ -1,7 +1,11 @@
 {
   "name": "youtube-latest",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "View the most recently uploaded videos on youtube",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/benjaminheng/youtube-latest"
+  },
   "scripts": {
     "start": "node app/server/index.js",
     "start:dev": "nodemon --watch app/server app/server/index.js",
