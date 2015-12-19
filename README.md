@@ -15,7 +15,7 @@ npm install
 Configure your [YouTube Data API key](https://developers.google.com/youtube/v3/getting-started) as an environment variable
 
 ```bash
-export YTLATEST_API_KEY=<YOUR_API_KEY>
+export API_KEY=<YOUR_API_KEY>
 ```
 
 Start the app
