@@ -8,10 +8,10 @@ import fetch from 'isomorphic-fetch';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.videos = [];
         this.refresh = this.refresh.bind(this);
-
+        this.videos = [];
         this.viewedVideos = [];
+        this.showWarning = false;
     }
 
     componentDidMount() {
@@ -36,6 +36,7 @@ class App extends Component {
 
     processRefresh(result) {
         const items = result.items;
+        this.showWarning = items.length < 20 ? true : false;
         // sort with most recent first
         items.sort((item1, item2) => {
             return item1.snippet.publishedAt < item2.snippet.publishedAt ? 1 : -1;
@@ -79,7 +80,7 @@ class App extends Component {
     render() {
         const url = this.getEmbedUrl(this.videos[this.selectedIndex]);
         return (
-            <div>
+            <div className='content'>
                 <GitHubRibbon />
                 <div className='hero'>
                     <Header />
@@ -88,6 +89,12 @@ class App extends Component {
                     <YoutubePlayer url={url} />
                     <RefreshButton clickHandler={this.refresh} />
                 </div>
+
+                {this.showWarning &&
+                    <div className='notification warning'>
+                        We've detected some problems with the YouTube API. You may experience issues loading new videos at the moment. Sorry :(
+                    </div>
+                }
             </div>
         );
     }

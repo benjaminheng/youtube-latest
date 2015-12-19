@@ -1,3 +1,7 @@
+.content {
+    margin-bottom: $spacing-unit;
+}
+
 .hero {
     background: url('../resources/img/hero-banner.jpg') no-repeat center center;
     background-size: cover;
@@ -8,5 +12,17 @@
     margin-top: -250px;
     margin-left: $spacing-unit / 2;
     margin-right: $spacing-unit / 2;
-    margin-bottom: $spacing-unit * 2;
+    margin-bottom: $spacing-unit;
+}
+
+.notification {
+    max-width: 730px;
+    padding: 5px;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(16, 16, 16, 0.5);
+
+    &.warning {
+        background-color: rgba(255, 81, 81, 0.45);
+        border: 1px solid #A42117;
+    }
 }
