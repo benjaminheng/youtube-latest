@@ -28,7 +28,7 @@ npm run start
 
 ```
 npm install
-export YTLATEST_API_KEY=<YOUR_API_KEY>
+export API_KEY=<YOUR_API_KEY>
 export NODE_ENV=production
 npm run build
 npm run start
