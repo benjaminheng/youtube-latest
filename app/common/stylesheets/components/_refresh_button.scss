@@ -14,9 +14,13 @@
         border: 1px solid darken(#1877C1, 30%);
         border-radius: 2px;
         box-shadow: 0 5px 10px rgba(16, 16, 16, 0.5);
-        padding-left: 25px;
+        padding: 0;
         cursor: pointer;
         position: relative;
+
+        .refresh-button-text {
+            padding-left: 15px;
+        }
 
         .icon {
             position: absolute;
