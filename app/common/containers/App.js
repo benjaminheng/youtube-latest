@@ -45,8 +45,8 @@ class App extends Component {
             this.videos = items;
             this.selectRandomVideo();
             this.updateViewedVideos();
-            this.forceUpdate();
         }
+        this.forceUpdate();
     }
 
     // Smart randomize to not select videos the user has already viewed
