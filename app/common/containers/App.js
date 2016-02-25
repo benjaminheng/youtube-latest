@@ -4,6 +4,8 @@ import YoutubePlayer from '../components/YoutubePlayer';
 import RefreshButton from '../components/RefreshButton';
 import GitHubRibbon from '../components/GitHubRibbon';
 import fetch from 'isomorphic-fetch';
+import ga from 'react-ga';
+import config from '../../../config';
 
 class App extends Component {
     constructor(props) {
@@ -15,6 +17,8 @@ class App extends Component {
     }
 
     componentDidMount() {
+        ga.initialize(config.gaTrackingId);
+        ga.pageview('/');
         this.refresh();
     }
 
@@ -29,6 +33,7 @@ class App extends Component {
     }
 
     refresh() {
+        ga.event({category: 'Video', action: 'Refresh video'});
         fetch('/api/latest')
             .then(response => response.json())
             .then(json => this.processRefresh(json));
